@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="029ca73f-c3d3-46ab-b6c5-6be3d94e06cc" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/userManagement$test.coverage" NAME="test Coverage Results" MODIFIED="1555487582884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test$md5_test.coverage" NAME="md5_test Coverage Results" MODIFIED="1553396034409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test$my_decyropMD5.coverage" NAME="my_decyropMD5 Coverage Results" MODIFIED="1553585420941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/userManagement$add.coverage" NAME="add Coverage Results" MODIFIED="1555578363992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test$test.coverage" NAME="test Coverage Results" MODIFIED="1554714956719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/userManagement$my_add.coverage" NAME="my_add Coverage Results" MODIFIED="1555506081908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="add.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/add.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="83" column="26" lean-forward="true" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+              <folding>
+                <element signature="e#23#38#0" expanded="true" />
+                <element signature="e#190#934#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_add_feizhixia.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/my_add_feizhixia.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="763" column="35" lean-forward="false" selection-start-line="763" selection-start-column="35" selection-end-line="763" selection-end-column="35" />
+              <folding>
+                <element signature="e#404#1500#0" expanded="false" />
+                <element signature="e#1604#4051#0" expanded="false" />
+                <element signature="e#4115#4398#0" expanded="false" />
+                <element signature="e#4532#5423#0" expanded="false" />
+                <element signature="e#5486#5773#0" expanded="false" />
+                <element signature="e#5864#6370#0" expanded="false" />
+                <element signature="e#6442#6729#0" expanded="false" />
+                <element signature="e#6792#7088#0" expanded="false" />
+                <element signature="e#7887#8524#0" expanded="false" />
+                <element signature="e#8587#8870#0" expanded="false" />
+                <element signature="e#8992#10861#0" expanded="false" />
+                <element signature="e#10985#11602#0" expanded="false" />
+                <element signature="e#11666#11874#0" expanded="false" />
+                <element signature="e#11928#12551#0" expanded="false" />
+                <element signature="e#19068#19677#0" expanded="false" />
+                <element signature="e#20111#20875#0" expanded="false" />
+                <element signature="e#20575#20875#0" expanded="false" />
+                <element signature="e#28574#29295#0" expanded="false" />
+                <element signature="e#29469#29817#0" expanded="false" />
+                <element signature="e#33350#36238#0" expanded="false" />
+                <marker date="1555644564254" expanded="true" signature="411:472" ph="SELECT uid F... yz_jxgl_teacher" />
+                <marker date="1555644564254" expanded="true" signature="687:732" ph="SELECT quanx... yz_user" />
+                <marker date="1555644564254" expanded="true" signature="872:925" ph="UPDATE yzbc.yz_user... " />
+                <marker date="1555644564254" expanded="true" signature="1191:1253" ph="UPDATE yzbc.yz_jxgl_teacher... " />
+                <marker date="1555644564254" expanded="true" signature="1703:1777" ph="SELECT id FR... yz_jxgl_grade" />
+                <marker date="1555644564254" expanded="true" signature="2031:2115" ph="SELECT id,st... yz_jxgl_class" />
+                <marker date="1555644564254" expanded="true" signature="2764:3009" ph="INSERT INTO yzbc.yz_user... " />
+                <marker date="1555644564254" expanded="true" signature="3584:3715" ph="INSERT INTO yzbc.yz_jxgl_student... " />
+                <marker date="1555644564254" expanded="true" signature="4157:4215" ph="SELECT id,ni... yz_user" />
+                <marker date="1555644564254" expanded="true" signature="4825:5020" ph="INSERT INTO yzbc.yz_jxgl_class... " />
+                <marker date="1555644564254" expanded="true" signature="5528:5583" ph="SELECT id FR... yz_jxgl_class" />
+                <marker date="1555644564254" expanded="true" signature="5914:6029" ph="INSERT INTO yzbc.yz_jxgl_grade... " />
+                <marker date="1555644564254" expanded="true" signature="6484:6539" ph="SELECT id FR... yz_jxgl_grade" />
+                <marker date="1555644564254" expanded="true" signature="6834:6897" ph="SELECT id FR... yz_readsort" />
+                <marker date="1555644564254" expanded="true" signature="7241:7296" ph="SELECT allow... yz_readsort" />
+                <marker date="1555644564254" expanded="true" signature="7489:7551" ph="UPDATE yzbc.yz_readsort... " />
+                <marker date="1555644564254" expanded="true" signature="8112:8203" ph="INSERT INTO yzbc.yz_usergroup... " />
+                <marker date="1555644564254" expanded="true" signature="8629:8688" ph="SELECT id FR... yz_usergroup" />
+                <marker date="1555644564254" expanded="true" signature="9590:9848" ph="INSERT INTO yzbc.yz_user... " />
+                <marker date="1555644564254" expanded="true" signature="10422:10532" ph="INSERT INTO yz_jxgl_teacher" />
+                <marker date="1555644564254" expanded="true" signature="11109:11264" ph="INSERT INTO yzbc.yz_jxgl_school... " />
+                <marker date="1555644564254" expanded="true" signature="11673:11732" ph="SELECT id FR... yz_jxgl_school" />
+                <marker date="1555644564254" expanded="true" signature="11998:12047" ph="SELECT id FR... yz_user" />
+                <marker date="1555644564254" expanded="true" signature="12251:12299" ph="SELECT id FR... yz_jxgl_teacher" />
+                <marker date="1555644564254" expanded="true" signature="12812:12919" ph="INSERT INTO yzbc.yz_readsort... " />
+                <marker date="1555644564254" expanded="true" signature="13403:13454" ph="SELECT id FR... yz_readsort" />
+                <marker date="1555644564254" expanded="true" signature="26249:26310" ph="SELECT id FR... yz_readsort" />
+                <marker date="1555644564254" expanded="true" signature="26850:26905" ph="SELECT title... yz_read" />
+                <marker date="1555644564254" expanded="true" signature="27491:27572" ph="INSERT INTO yzbc.yz_read... " />
+                <marker date="1555644564254" expanded="true" signature="30747:30808" ph="SELECT id FR... yz_readsort" />
+                <marker date="1555644564254" expanded="true" signature="31411:31473" ph="SELECT title... yz_read" />
+                <marker date="1555644564254" expanded="true" signature="32181:32262" ph="INSERT INTO yzbc.yz_read... " />
+                <marker date="1555644564254" expanded="true" signature="34744:34806" ph="UPDATE yzbc.yz_user " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_add_zhixia.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my_add_zhixia.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="715" column="14" lean-forward="false" selection-start-line="715" selection-start-column="14" selection-end-line="715" selection-end-column="14" />
+              <folding>
+                <marker date="1555578244685" expanded="true" signature="478:539" ph="SELECT uid F... yz_jxgl_teacher" />
+                <marker date="1555578244685" expanded="true" signature="754:799" ph="SELECT quanx... yz_user" />
+                <marker date="1555578244685" expanded="true" signature="939:992" ph="UPDATE yzbc.yz_user... " />
+                <marker date="1555578244685" expanded="true" signature="1258:1320" ph="UPDATE yzbc.yz_jxgl_teacher... " />
+                <marker date="1555578244685" expanded="true" signature="1768:1842" ph="SELECT id FR... yz_jxgl_grade" />
+                <marker date="1555578244685" expanded="true" signature="2096:2180" ph="SELECT id,st... yz_jxgl_class" />
+                <marker date="1555578244685" expanded="true" signature="2829:3074" ph="INSERT INTO yzbc.yz_user... " />
+                <marker date="1555578244685" expanded="true" signature="3649:3780" ph="INSERT INTO yzbc.yz_jxgl_student... " />
+                <marker date="1555578244685" expanded="true" signature="4221:4279" ph="SELECT id,ni... yz_user" />
+                <marker date="1555578244685" expanded="true" signature="4889:5084" ph="INSERT INTO yzbc.yz_jxgl_class... " />
+                <marker date="1555578244685" expanded="true" signature="5593:5648" ph="SELECT id FR... yz_jxgl_class" />
+                <marker date="1555578244685" expanded="true" signature="5980:6095" ph="INSERT INTO yzbc.yz_jxgl_grade... " />
+                <marker date="1555578244685" expanded="true" signature="6551:6606" ph="SELECT id FR... yz_jxgl_grade" />
+                <marker date="1555578244685" expanded="true" signature="6900:6963" ph="SELECT id FR... yz_readsort" />
+                <marker date="1555578244685" expanded="true" signature="7306:7361" ph="SELECT allow... yz_readsort" />
+                <marker date="1555578244685" expanded="true" signature="7554:7616" ph="UPDATE yzbc.yz_readsort... " />
+                <marker date="1555578244685" expanded="true" signature="8177:8268" ph="INSERT INTO yzbc.yz_usergroup... " />
+                <marker date="1555578244685" expanded="true" signature="8694:8753" ph="SELECT id FR... yz_usergroup" />
+                <marker date="1555578244685" expanded="true" signature="9656:9914" ph="INSERT INTO yzbc.yz_user... " />
+                <marker date="1555578244685" expanded="true" signature="10488:10598" ph="INSERT INTO yz_jxgl_teacher" />
+                <marker date="1555578244685" expanded="true" signature="11175:11330" ph="INSERT INTO yzbc.yz_jxgl_school... " />
+                <marker date="1555578244685" expanded="true" signature="11740:11799" ph="SELECT id FR... yz_jxgl_school" />
+                <marker date="1555578244685" expanded="true" signature="12051:12100" ph="SELECT id FR... yz_user" />
+                <marker date="1555578244685" expanded="true" signature="12304:12352" ph="SELECT id FR... yz_jxgl_teacher" />
+                <marker date="1555578244685" expanded="true" signature="12829:12936" ph="INSERT INTO yzbc.yz_readsort... " />
+                <marker date="1555578244685" expanded="true" signature="13407:13458" ph="SELECT id FR... yz_readsort" />
+                <marker date="1555578244685" expanded="true" signature="23106:23167" ph="SELECT id FR... yz_readsort" />
+                <marker date="1555578244685" expanded="true" signature="23611:23666" ph="SELECT title... yz_read" />
+                <marker date="1555578244685" expanded="true" signature="24196:24277" ph="INSERT INTO yzbc.yz_read... " />
+                <marker date="1555578244685" expanded="true" signature="27919:27981" ph="UPDATE yzbc.yz_user " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>a</find>
+      <find>findGradeIdByRSid</find>
+      <find>courseReadSortId</find>
+      <find>findSchoolByName</find>
+      <find>createSchool</find>
+      <find>createClass</find>
+      <find>createGrade</find>
+      <find>expire_date</find>
+      <find>checkReadsort</find>
+      <find>checkTeacher</find>
+      <find>updateTeacher</find>
+      <find>encoding</find>
+      <find>delClassByClassName</find>
+      <find>path2</find>
+      <find>md5</find>
+      <find>当前用户不存在</find>
+      <find>creatStudent</find>
+      <find>createReadsort</find>
+      <find>allowgroupids</find>
+      <find>checkTitleExist</find>
+      <find>，</find>
+      <find>updateReadsort</find>
+      <find>teacherCourseTable</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$APPLICATION_HOME_DIR$/helpers/packaging_tool.py" />
+        <option value="$PROJECT_DIR$/hepler.py" />
+        <option value="$PROJECT_DIR$/jxgl/山东省/济南市/成都信息工程大学/老师表.txt" />
+        <option value="$PROJECT_DIR$/jxgl/山东省/济南市/成都信息工程大学/年级班级老师课程表.txt" />
+        <option value="$PROJECT_DIR$/jxgl/山东省/济南市/测试用某高校/老师表.txt" />
+        <option value="$PROJECT_DIR$/jxgl/山东省/济南市/测试用某高校/年级班级老师课程表.txt" />
+        <option value="$PROJECT_DIR$/my_del.py" />
+        <option value="$PROJECT_DIR$/my_sqlConnection.py" />
+        <option value="$PROJECT_DIR$/jxgl/山东省/济南市/测试用某高校/cx2.csv" />
+        <option value="$PROJECT_DIR$/jxgl/北京市/北京市第一实验中学/cx2.csv" />
+        <option value="$PROJECT_DIR$/jxgl/北京市/北京市第一实验中学/老师表.txt" />
+        <option value="$PROJECT_DIR$/jxgl/北京市/北京市第一实验中学/年级班级老师课程表.txt" />
+        <option value="$PROJECT_DIR$/md5_test.py" />
+        <option value="$PROJECT_DIR$/my_decyropMD5.py" />
+        <option value="$PROJECT_DIR$/my_login.py" />
+        <option value="$PROJECT_DIR$/test.txt" />
+        <option value="$PROJECT_DIR$/xs/四川省/成都市/西寺小学/年级班级老师课程表.txt" />
+        <option value="$PROJECT_DIR$/xs/四川省/成都市/西寺小学/老师表.txt" />
+        <option value="$PROJECT_DIR$/cuit/四川省/成都市/成都信息工程大学/研究生机器人技术/cx2.csv" />
+        <option value="$PROJECT_DIR$/my_delete.py" />
+        <option value="$PROJECT_DIR$/my_add.py" />
+        <option value="$PROJECT_DIR$/my_freeze.py" />
+        <option value="$PROJECT_DIR$/my_ls.py" />
+        <option value="$PROJECT_DIR$/my_hepler.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/my_update.py" />
+        <option value="$PROJECT_DIR$/update.py" />
+        <option value="$PROJECT_DIR$/my_admin.py" />
+        <option value="$PROJECT_DIR$/delete.py" />
+        <option value="$PROJECT_DIR$/my_add_zhixia.py" />
+        <option value="$PROJECT_DIR$/ls.py" />
+        <option value="$PROJECT_DIR$/my_add_feizhixia.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1037" />
+    <option name="height" value="1087" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="userManagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="userManagement" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/ml/Machine-Learning" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\userManagement\cuit\四川省\成都市\成都信息工程大学" />
+      <recent name="D:\test" />
+      <recent name="D:\test\jxgl" />
+      <recent name="D:\test\jxgl\四川省\成都市\丹景九义校" />
+      <recent name="D:\test\jxgl\四川省\成都市" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\userManagement\cuit\四川省\成都市\成都信息工程大学\研究生机器人技术" />
+      <recent name="D:\test\xs\四川省\成都市\西寺小学" />
+      <recent name="D:\test\jxgl\北京市\北京市第一实验中学" />
+      <recent name="D:\test" />
+      <recent name="D:\test\jxgl\四川省\成都市" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.add">
+    <configuration name="add" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="test" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/add.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="md5_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="test" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/md5_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="my_add" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="test" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\userManagement\add.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="my_decyropMD5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="test" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_decyropMD5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="test" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.md5_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.my_decyropMD5" />
+      <item index="3" class="java.lang.String" itemvalue="Python.my_add" />
+      <item index="4" class="java.lang.String" itemvalue="Python.add" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.add" />
+        <item index="1" class="java.lang.String" itemvalue="Python.my_add" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.my_decyropMD5" />
+        <item index="4" class="java.lang.String" itemvalue="Python.md5_test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="029ca73f-c3d3-46ab-b6c5-6be3d94e06cc" name="Default" comment="" />
+      <created>1552623568796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552623568796</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20752798" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1453125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37741607" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="37" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/packaging_tool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2530">
+          <caret line="113" column="20" lean-forward="false" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_sqlConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/packaging_tool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="110" column="22" lean-forward="true" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jxgl_setup.php" />
+    <entry file="file://$PROJECT_DIR$/jxgl/index.php" />
+    <entry file="file://$PROJECT_DIR$/venv2/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv2/Lib/site-packages/pymysql/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="466" column="0" lean-forward="false" selection-start-line="466" selection-start-column="0" selection-end-line="466" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv2/Lib/site-packages/pymysql/converters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv2/Lib/site-packages/pymysql/cursors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/丹景九义校/校管表.txt" />
+    <entry file="file://$PROJECT_DIR$/柏树九义校/年级班级老师课程表.txt" />
+    <entry file="file://$PROJECT_DIR$/董家埂九义校/年级班级老师课程表.txt" />
+    <entry file="file://$PROJECT_DIR$/新民九义校/xm.csv" />
+    <entry file="file://$PROJECT_DIR$/山东省/济南市/测试用某高校/log.txt" />
+    <entry file="file://$PROJECT_DIR$/山东省/济南市/测试用某高校/老师表.txt" />
+    <entry file="file://$PROJECT_DIR$/山东省/济南市/测试用某高校/校管表.txt" />
+    <entry file="file://$PROJECT_DIR$/山东省/济南市/测试用某高校/年级班级老师课程表.txt" />
+    <entry file="file://$PROJECT_DIR$/山东省/济南市/测试用某高校/cx2.csv" />
+    <entry file="file://$PROJECT_DIR$/doc/北京市/北京市第一实验中学/log.txt" />
+    <entry file="file://$PROJECT_DIR$/doc/北京市/北京市第一实验中学/年级班级老师课程表.txt" />
+    <entry file="file://$PROJECT_DIR$/md5_test.py" />
+    <entry file="file://C:/Program Files (x86)/My application/test.py" />
+    <entry file="file://$PROJECT_DIR$/doc/北京市/北京市第一实验中学/校管表.txt" />
+    <entry file="file://$PROJECT_DIR$/doc/北京市/北京市第一实验中学/cx2.csv" />
+    <entry file="file://$PROJECT_DIR$/doc/山东省/济南市/测试用某高校/年级班级老师课程表.txt" />
+    <entry file="file://$PROJECT_DIR$/doc/北京市/北京市第一实验中学/老师表.txt" />
+    <entry file="file://$PROJECT_DIR$/doc/山东省/济南市/测试用某高校/老师表.txt" />
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xs/四川省/成都市/西寺小学/cx2.csv" />
+    <entry file="file://$PROJECT_DIR$/xs/四川省/成都市/西寺小学/西寺小学18级账号.csv" />
+    <entry file="file://$PROJECT_DIR$/xs/四川省/成都市/西寺小学/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xs/四川省/成都市/西寺小学/年级班级老师课程表.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xs/四川省/成都市/西寺小学/校管表.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xs/四川省/成都市/西寺小学/老师表.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xs/四川省/成都市/西寺小学/xs.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <marker date="1553651765910" expanded="true" signature="106:176" ph="SELECT passw... yz_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_sqlConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_decyropMD5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="31" column="51" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cuit/四川省/成都市/成都信息工程大学/cx2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freeze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#37#0" expanded="false" />
+            <element signature="e#348#1502#0" expanded="false" />
+            <element signature="e#1560#2605#0" expanded="false" />
+            <element signature="e#2662#3855#0" expanded="false" />
+            <element signature="e#3915#4832#0" expanded="false" />
+            <element signature="e#4873#5490#0" expanded="false" />
+            <element signature="e#5542#6286#0" expanded="false" />
+            <element signature="e#6319#8630#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="14" />
+          <folding>
+            <element signature="e#23#37#0" expanded="false" />
+            <element signature="e#103#847#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="false" />
+            <element signature="e#150#183#0" expanded="false" />
+            <element signature="e#1429#2173#0" expanded="false" />
+            <marker date="1555556555449" expanded="true" signature="4175:4239" ph="SELECT ident... yz_user" />
+            <marker date="1555556555449" expanded="true" signature="4550:4609" ph="UPDATE yzbc.yz_user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delete.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="177" column="50" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <folding>
+            <element signature="e#327#2994#0" expanded="false" />
+            <element signature="e#3074#6616#0" expanded="false" />
+            <element signature="e#7217#7252#0" expanded="false" />
+            <element signature="e#7788#8532#0" expanded="false" />
+            <marker date="1555557016603" expanded="true" signature="6693:6742" ph="SELECT id FR... yz_user" />
+            <marker date="1555557016603" expanded="true" signature="6976:7022" ph="DELETE FROM yzbc.yz_user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="83" column="26" lean-forward="true" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+            <element signature="e#190#934#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#684#2752#0" expanded="false" />
+            <element signature="e#2862#3385#0" expanded="false" />
+            <element signature="e#7148#8189#0" expanded="false" />
+            <element signature="e#8261#8866#0" expanded="false" />
+            <element signature="e#8975#9497#0" expanded="false" />
+            <element signature="e#9499#9526#0" expanded="false" />
+            <element signature="e#10757#11501#0" expanded="false" />
+            <marker date="1555595362486" expanded="true" signature="3734:3792" ph="SELECT id FR... yz_jxgl_school" />
+            <marker date="1555595362486" expanded="true" signature="3956:4030" ph="SELECT id FR... yz_jxgl_grade" />
+            <marker date="1555595362486" expanded="true" signature="4218:4307" ph="SELECT id FR... yz_jxgl_class" />
+            <marker date="1555595362486" expanded="true" signature="4541:4594" ph="SELECT uid F... yz_jxgl_student" />
+            <marker date="1555595362486" expanded="true" signature="4920:4959" ph="SELECT missi... yz_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="887">
+          <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/update.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="46" />
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#204#0" expanded="false" />
+            <element signature="e#2538#3282#0" expanded="false" />
+            <marker date="1555556555457" expanded="true" signature="2545:2615" ph="SELECT passw... yz_user" />
+            <marker date="1555556555457" expanded="true" signature="7024:7072" ph="UPDATE yzbc.yz_user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_add_zhixia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="715" column="14" lean-forward="false" selection-start-line="715" selection-start-column="14" selection-end-line="715" selection-end-column="14" />
+          <folding>
+            <marker date="1555578244685" expanded="true" signature="478:539" ph="SELECT uid F... yz_jxgl_teacher" />
+            <marker date="1555578244685" expanded="true" signature="754:799" ph="SELECT quanx... yz_user" />
+            <marker date="1555578244685" expanded="true" signature="939:992" ph="UPDATE yzbc.yz_user... " />
+            <marker date="1555578244685" expanded="true" signature="1258:1320" ph="UPDATE yzbc.yz_jxgl_teacher... " />
+            <marker date="1555578244685" expanded="true" signature="1768:1842" ph="SELECT id FR... yz_jxgl_grade" />
+            <marker date="1555578244685" expanded="true" signature="2096:2180" ph="SELECT id,st... yz_jxgl_class" />
+            <marker date="1555578244685" expanded="true" signature="2829:3074" ph="INSERT INTO yzbc.yz_user... " />
+            <marker date="1555578244685" expanded="true" signature="3649:3780" ph="INSERT INTO yzbc.yz_jxgl_student... " />
+            <marker date="1555578244685" expanded="true" signature="4221:4279" ph="SELECT id,ni... yz_user" />
+            <marker date="1555578244685" expanded="true" signature="4889:5084" ph="INSERT INTO yzbc.yz_jxgl_class... " />
+            <marker date="1555578244685" expanded="true" signature="5593:5648" ph="SELECT id FR... yz_jxgl_class" />
+            <marker date="1555578244685" expanded="true" signature="5980:6095" ph="INSERT INTO yzbc.yz_jxgl_grade... " />
+            <marker date="1555578244685" expanded="true" signature="6551:6606" ph="SELECT id FR... yz_jxgl_grade" />
+            <marker date="1555578244685" expanded="true" signature="6900:6963" ph="SELECT id FR... yz_readsort" />
+            <marker date="1555578244685" expanded="true" signature="7306:7361" ph="SELECT allow... yz_readsort" />
+            <marker date="1555578244685" expanded="true" signature="7554:7616" ph="UPDATE yzbc.yz_readsort... " />
+            <marker date="1555578244685" expanded="true" signature="8177:8268" ph="INSERT INTO yzbc.yz_usergroup... " />
+            <marker date="1555578244685" expanded="true" signature="8694:8753" ph="SELECT id FR... yz_usergroup" />
+            <marker date="1555578244685" expanded="true" signature="9656:9914" ph="INSERT INTO yzbc.yz_user... " />
+            <marker date="1555578244685" expanded="true" signature="10488:10598" ph="INSERT INTO yz_jxgl_teacher" />
+            <marker date="1555578244685" expanded="true" signature="11175:11330" ph="INSERT INTO yzbc.yz_jxgl_school... " />
+            <marker date="1555578244685" expanded="true" signature="11740:11799" ph="SELECT id FR... yz_jxgl_school" />
+            <marker date="1555578244685" expanded="true" signature="12051:12100" ph="SELECT id FR... yz_user" />
+            <marker date="1555578244685" expanded="true" signature="12304:12352" ph="SELECT id FR... yz_jxgl_teacher" />
+            <marker date="1555578244685" expanded="true" signature="12829:12936" ph="INSERT INTO yzbc.yz_readsort... " />
+            <marker date="1555578244685" expanded="true" signature="13407:13458" ph="SELECT id FR... yz_readsort" />
+            <marker date="1555578244685" expanded="true" signature="23106:23167" ph="SELECT id FR... yz_readsort" />
+            <marker date="1555578244685" expanded="true" signature="23611:23666" ph="SELECT title... yz_read" />
+            <marker date="1555578244685" expanded="true" signature="24196:24277" ph="INSERT INTO yzbc.yz_read... " />
+            <marker date="1555578244685" expanded="true" signature="27919:27981" ph="UPDATE yzbc.yz_user " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_add_feizhixia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="763" column="35" lean-forward="false" selection-start-line="763" selection-start-column="35" selection-end-line="763" selection-end-column="35" />
+          <folding>
+            <element signature="e#404#1500#0" expanded="false" />
+            <element signature="e#1604#4051#0" expanded="false" />
+            <element signature="e#4115#4398#0" expanded="false" />
+            <element signature="e#4532#5423#0" expanded="false" />
+            <element signature="e#5486#5773#0" expanded="false" />
+            <element signature="e#5864#6370#0" expanded="false" />
+            <element signature="e#6442#6729#0" expanded="false" />
+            <element signature="e#6792#7088#0" expanded="false" />
+            <element signature="e#7887#8524#0" expanded="false" />
+            <element signature="e#8587#8870#0" expanded="false" />
+            <element signature="e#8992#10861#0" expanded="false" />
+            <element signature="e#10985#11602#0" expanded="false" />
+            <element signature="e#11666#11874#0" expanded="false" />
+            <element signature="e#11928#12551#0" expanded="false" />
+            <element signature="e#19068#19677#0" expanded="false" />
+            <element signature="e#20111#20875#0" expanded="false" />
+            <element signature="e#20575#20875#0" expanded="false" />
+            <element signature="e#28574#29295#0" expanded="false" />
+            <element signature="e#29469#29817#0" expanded="false" />
+            <element signature="e#33350#36238#0" expanded="false" />
+            <marker date="1555644564254" expanded="true" signature="411:472" ph="SELECT uid F... yz_jxgl_teacher" />
+            <marker date="1555644564254" expanded="true" signature="687:732" ph="SELECT quanx... yz_user" />
+            <marker date="1555644564254" expanded="true" signature="872:925" ph="UPDATE yzbc.yz_user... " />
+            <marker date="1555644564254" expanded="true" signature="1191:1253" ph="UPDATE yzbc.yz_jxgl_teacher... " />
+            <marker date="1555644564254" expanded="true" signature="1703:1777" ph="SELECT id FR... yz_jxgl_grade" />
+            <marker date="1555644564254" expanded="true" signature="2031:2115" ph="SELECT id,st... yz_jxgl_class" />
+            <marker date="1555644564254" expanded="true" signature="2764:3009" ph="INSERT INTO yzbc.yz_user... " />
+            <marker date="1555644564254" expanded="true" signature="3584:3715" ph="INSERT INTO yzbc.yz_jxgl_student... " />
+            <marker date="1555644564254" expanded="true" signature="4157:4215" ph="SELECT id,ni... yz_user" />
+            <marker date="1555644564254" expanded="true" signature="4825:5020" ph="INSERT INTO yzbc.yz_jxgl_class... " />
+            <marker date="1555644564254" expanded="true" signature="5528:5583" ph="SELECT id FR... yz_jxgl_class" />
+            <marker date="1555644564254" expanded="true" signature="5914:6029" ph="INSERT INTO yzbc.yz_jxgl_grade... " />
+            <marker date="1555644564254" expanded="true" signature="6484:6539" ph="SELECT id FR... yz_jxgl_grade" />
+            <marker date="1555644564254" expanded="true" signature="6834:6897" ph="SELECT id FR... yz_readsort" />
+            <marker date="1555644564254" expanded="true" signature="7241:7296" ph="SELECT allow... yz_readsort" />
+            <marker date="1555644564254" expanded="true" signature="7489:7551" ph="UPDATE yzbc.yz_readsort... " />
+            <marker date="1555644564254" expanded="true" signature="8112:8203" ph="INSERT INTO yzbc.yz_usergroup... " />
+            <marker date="1555644564254" expanded="true" signature="8629:8688" ph="SELECT id FR... yz_usergroup" />
+            <marker date="1555644564254" expanded="true" signature="9590:9848" ph="INSERT INTO yzbc.yz_user... " />
+            <marker date="1555644564254" expanded="true" signature="10422:10532" ph="INSERT INTO yz_jxgl_teacher" />
+            <marker date="1555644564254" expanded="true" signature="11109:11264" ph="INSERT INTO yzbc.yz_jxgl_school... " />
+            <marker date="1555644564254" expanded="true" signature="11673:11732" ph="SELECT id FR... yz_jxgl_school" />
+            <marker date="1555644564254" expanded="true" signature="11998:12047" ph="SELECT id FR... yz_user" />
+            <marker date="1555644564254" expanded="true" signature="12251:12299" ph="SELECT id FR... yz_jxgl_teacher" />
+            <marker date="1555644564254" expanded="true" signature="12812:12919" ph="INSERT INTO yzbc.yz_readsort... " />
+            <marker date="1555644564254" expanded="true" signature="13403:13454" ph="SELECT id FR... yz_readsort" />
+            <marker date="1555644564254" expanded="true" signature="26249:26310" ph="SELECT id FR... yz_readsort" />
+            <marker date="1555644564254" expanded="true" signature="26850:26905" ph="SELECT title... yz_read" />
+            <marker date="1555644564254" expanded="true" signature="27491:27572" ph="INSERT INTO yzbc.yz_read... " />
+            <marker date="1555644564254" expanded="true" signature="30747:30808" ph="SELECT id FR... yz_readsort" />
+            <marker date="1555644564254" expanded="true" signature="31411:31473" ph="SELECT title... yz_read" />
+            <marker date="1555644564254" expanded="true" signature="32181:32262" ph="INSERT INTO yzbc.yz_read... " />
+            <marker date="1555644564254" expanded="true" signature="34744:34806" ph="UPDATE yzbc.yz_user " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

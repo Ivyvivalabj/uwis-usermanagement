@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['add.py'],
-             pathex=['D:\\userManagement'],
+             pathex=['/Users/chenmr/project/userManagement'],
              binaries=[],
              datas=[],
              hiddenimports=[],

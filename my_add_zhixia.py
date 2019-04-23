@@ -711,6 +711,76 @@ def zhixia_main(entry, path, db, cursor):
                             updateTeacher(key, teacherClassId[key], teacherQXTabel[key], cursor, db)
                             print("更新教师成功")
 
+                        # 进行标准课件的更新
+                        for line in teacherCourseTable:
+                            lineList = line.split('，')
+                            # 首先要找到班级板块
+                            gradeRSid = checkReadsort(gradeName.__str__(), schoolRSid, cursor)
+                            classRSid = checkReadsort(className, gradeRSid, cursor)
+                            if gradeRSid & classRSid:
+                                courseName = lineList[3].strip().__str__()
+                                sql = "SELECT id FROM yzbc.yz_readsort where title like '%%%%%s%%%%' " % courseName
+                                cursor.execute(sql)
+                                # 找到标准课程所对应的板块ID
+                                courseReadSortId = cursor.fetchone()
+                                if courseReadSortId == None:
+                                    print("当前年级板块没有标准课程，无需更新")
+                                else:
+                                    # 如果当前找到的课程板块不为空
+                                    # 获取当前板块下的所有帖子
+                                    sql = "SELECT title,content FROM yzbc.yz_read where sortid  = %s " % \
+                                          courseReadSortId[0]
+                                    cursor.execute(sql)
+                                    courseRead = cursor.fetchall()
+                                    # 对每一个标准课件的内容和当前班级下的标准课件的内容进行比较和替换
+                                    for read in courseRead:
+                                        # 标准课件的内容
+                                        newContent = read[1]
+                                        # 标准课件的标题
+                                        newTitle = read[0]
+                                        # 标准课件的uid
+                                        uid = 1
+                                        # 当前班级的板块id
+                                        sortId = classRSid
+                                        # 根据班级板块的id和帖子的标题进行在班级板块下的标准课件检查
+                                        sql = "SELECT content,id FROM yzbc.yz_read where sortid  = %s and title = '%s' " % (sortId, newTitle)
+                                        cursor.execute(sql)
+                                        classRead = cursor.fetchall()
+                                        if classRead:
+                                            # 存在从标准课件中复制过来的课件；将标准课件中帖子的内容复制过来
+                                            classReadId = classRead[1]
+                                            classReadContent = classRead[0]
+                                            sql = "UPDATE yzbc.yz_read SET content = '%s' WHERE id = %s;"
+                                            data = (classReadContent, classReadId)
+                                            try:
+                                                # 执行sql语句
+                                                cursor.execute(sql % data)
+                                                # 提交到数据库执行
+                                                db.commit()
+                                                print("标准课件已经更新")
+                                            except:
+                                                print("写入发生错误，进行数据回滚")
+                                                db.rollback()
+                                                return False
+
+                                        # 这篇帖子可能是后面加上去的
+                                        else:
+                                            # 那么直接把这篇帖子插入就可以了
+                                            sql = "INSERT INTO yzbc.yz_read(uid, sortid, title, content) VALUES (%s, %s, '%s', '%s');"
+                                            data = (uid, sortId, newTitle, newContent)
+                                            print(sql % data)
+                                            try:
+                                                # 执行sql语句
+                                                cursor.execute(sql % data)
+                                                # 提交到数据库执行
+                                                db.commit()
+                                                print("%s帖子数据已经提交到数据库" % needTitle)
+                                            except:
+                                                print("写入发生错误，进行数据回滚")
+                                                db.rollback()
+                            else:
+                                print("班级或年级板块没有创建，不需要更新课程")
+
                         # 进行学生表数据的录入
                         with os.scandir(path4) as it4:
                             for entry4 in it4:

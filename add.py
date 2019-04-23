@@ -93,7 +93,7 @@ if __name__ == '__main__':
     path = des
     print("正在检测安装文件是否齐全...........")
     # 判断是否是直辖市，判断后执行对应的方法
-    if os.scandir(path)：
+    if os.scandir(path):
         with os.scandir(path) as it:
             for entry in it:
                 if not entry.name.startswith('.') and entry.is_dir() and entry.name != "logs" and entry != None:
@@ -101,6 +101,7 @@ if __name__ == '__main__':
                         zx.zhixia_main(entry, path, db, cursor)
                     else:
                         fzx.feizhixia_main(entry, path, db, cursor)
+    # 如果当前的路径不存在，则提示用户当前路径不存在
     else:
         print("当前路径不存在")
 

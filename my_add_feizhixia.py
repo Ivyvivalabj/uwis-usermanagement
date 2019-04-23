@@ -107,7 +107,6 @@ def creatStudent(row,schoolid,cursor, db,expire_date=94608000,password=123456):
           ",jifen, tiandou, identification) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', %s, %s, %s, '%s', %s, %s" \
           ", '%s');"
     data = (username, password, email, nickname, sex, regip, regtime, groupid, readlevel, quanxian, jifen, tiandou, identification)
-
     try:
         # 执行sql语句
         cursor.execute(sql % data)
@@ -767,28 +766,56 @@ def feizhixia_main(entry, path, db, cursor):
                                             else:
                                                 # 如果当前找到的课程板块不为空
                                                 # 获取当前板块下的所有帖子
-                                                sql = "SELECT title,content,sortid FROM yzbc.yz_read where sortid  = %s " % \
+                                                sql = "SELECT title,content FROM yzbc.yz_read where sortid  = %s " % \
                                                       courseReadSortId[0]
                                                 cursor.execute(sql)
                                                 courseRead = cursor.fetchall()
+                                                # 对每一个标准课件的内容和当前班级下的标准课件的内容进行比较和替换
                                                 for read in courseRead:
+                                                    # 标准课件的内容
                                                     newContent = read[1]
+                                                    # 标准课件的标题
                                                     newTitle = read[0]
-                                                    newSortId = read[2]
+                                                    # 标准课件的uid
                                                     uid = 1
+                                                    # 当前班级的板块id
                                                     sortId = classRSid
-                                                    sql = "INSERT INTO yzbc.yz_read(uid, sortid, title, content) VALUES (%s, %s, '%s', '%s');"
-                                                    data = (uid, sortId, needTitle, needContent)
-                                                    print(sql % data)
-                                                    try:
-                                                        # 执行sql语句
-                                                        cursor.execute(sql % data)
-                                                        # 提交到数据库执行
-                                                        db.commit()
-                                                        print("%s帖子数据已经提交到数据库" % needTitle)
-                                                    except:
-                                                        print("写入发生错误，进行数据回滚")
-                                                        db.rollback()
+                                                    # 根据班级板块的id和帖子的标题进行在班级板块下的标准课件检查
+                                                    sql = "SELECT content,id FROM yzbc.yz_read where sortid  = %s and title = '%s' " % (sortId, newTitle)
+                                                    cursor.execute(sql)
+                                                    classRead = cursor.fetchall()
+                                                    if classRead:
+                                                        # 存在从标准课件中复制过来的课件；将标准课件中帖子的内容复制过来
+                                                        classReadId = classRead[1]
+                                                        classReadContent = classRead[0]
+                                                        sql = "UPDATE yzbc.yz_read SET content = '%s' WHERE id = %s;"
+                                                        data = (classReadContent, classReadId)
+                                                        try:
+                                                            # 执行sql语句
+                                                            cursor.execute(sql % data)
+                                                            # 提交到数据库执行
+                                                            db.commit()
+                                                            print("标准课件已经更新")
+                                                        except:
+                                                            print("写入发生错误，进行数据回滚")
+                                                            db.rollback()
+                                                            return False
+
+                                                    # 这篇帖子可能是后面加上去的
+                                                    else:
+                                                        # 那么直接把这篇帖子插入就可以了
+                                                        sql = "INSERT INTO yzbc.yz_read(uid, sortid, title, content) VALUES (%s, %s, '%s', '%s');"
+                                                        data = (uid, sortId, newTitle, newContent)
+                                                        print(sql % data)
+                                                        try:
+                                                            # 执行sql语句
+                                                            cursor.execute(sql % data)
+                                                            # 提交到数据库执行
+                                                            db.commit()
+                                                            print("%s帖子数据已经提交到数据库" % needTitle)
+                                                        except:
+                                                            print("写入发生错误，进行数据回滚")
+                                                            db.rollback()
                                         else:
                                             print("班级或年级板块没有创建，不需要更新课程")
 

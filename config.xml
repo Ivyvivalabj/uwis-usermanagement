@@ -1,0 +1,26 @@
+<service>
+<add>
+	<log>1</log>
+	<other>None</other>
+</add>
+<delete>
+	<log>1</log>
+	<other>None</other>
+</delete>
+<update>
+	<log>1</log>
+	<other>None</other>
+</update>
+<ls>
+	<log>1</log>
+	<other>None</other>
+</ls>
+<grade>
+	<log>1</log>
+	<other>None</other>
+</grade>
+<freeze>
+	<log>1</log>
+	<other>None</other>
+</freeze>
+</service>

@@ -3,75 +3,14 @@
 import pymysql
 import hashlib
 import sys
+from xml.dom.minidom import parse
+import xml.dom.minidom
 
 """
 需求：
     1.修改指定学生的账号,设置账号的权限等级,设置账号的使用期限，设置账号的勋章
     update 属性名=值/属性名=值,属性名=值(更新多个属性使用逗号分隔) 用户名
 """
-# def update_main(cursor, db, des):
-#     desList = des.strip().split(' ')
-#     if desList.__len__() < 2:
-#         print("用户输入错误")
-#     else:
-#         attrList = desList[0]
-#         condition = desList[1]
-#         attrs = attrList.split(',')
-#         str = ''
-#         for i in range(attrs.__len__()):
-#             itList = attrs[i].split('=')
-#             # 更新的属性是密码
-#             if itList[0] == 'password':
-#                 tmp = itList[1]
-#                 m = hashlib.md5()
-#                 b = tmp.encode(encoding='utf-8')
-#                 m.update(b)
-#                 tmp_md5 = m.hexdigest()
-#                 psw = 'password=' + '\'' + tmp_md5 + '\''
-#                 attrs[i] = psw
-#                 if i == attrs.__len__()-1:
-#                     str = str + attrs[i].__str__()
-#                 else:
-#                     str = str + attrs[i].__str__() + ','
-#             # 更新的属性是昵称
-#             elif itList[0] == 'nickname':
-#                 tmp = 'nickname=' + '\'' + itList[1] + '\''
-#                 if i == attrs.__len__()-1:
-#                     str = str + tmp
-#                 else:
-#                     str = str + tmp + ','
-#             # 更新的属性是权限
-#             elif itList[0] == 'quanxian':
-#                 tmp = 'quanxian=' + '\'' + itList[1] + '\''
-#                 if i == attrs.__len__() - 1:
-#                     str = str + tmp
-#                 else:
-#                     str = str + tmp + ','
-#             # 更新的属性是用户名
-#             elif itList[0] == 'username':
-#                 tmp = 'username=' + '\'' + itList[1] + '\''
-#                 if i == attrs.__len__() - 1:
-#                     str = str + tmp
-#                 else:
-#                     str = str + tmp + ','
-#             else:
-#                 if i == attrs.__len__()-1:
-#                     str = str + attrs[i].__str__()
-#                 else:
-#                     str = str + attrs[i].__str__() + ','
-#
-#         sql = "UPDATE yzbc.yz_user SET %s WHERE username = '%s';"
-#         data = (str, condition)
-#         try:
-#             # 执行sql语句
-#             cursor.execute(sql % data)
-#             # 提交到数据库执行
-#             db.commit()
-#             print("用户更新已提交到数据库")
-#         except:
-#             print("写入发生错误，进行数据回滚")
-#             db.rollback()
-#             return False
 
 def isAdminUser(username, password, cursor):
     sql = "SELECT password,identification FROM yzbc.yz_user where username = '%s'" % (username)
@@ -151,65 +90,80 @@ if __name__ == '__main__':
                 f.write(username + "\n")
                 f.write(password)
                 break
-    # desList = sys.argv
-    # print(desList)
-    # if desList.__len__() > 3:
-    #     print("用户输入错误")
-    # else:
-    #     attrList = desList[1]
-    #     condition = desList[2]
-    #     attrs = attrList.split(',')
-    #     str = ''
-    #     for i in range(attrs.__len__()):
-    #         itList = attrs[i].split('=')
-    #         # 更新的属性是密码
-    #         if itList[0] == 'password':
-    #             tmp = itList[1]
-    #             m = hashlib.md5()
-    #             b = tmp.encode(encoding='utf-8')
-    #             m.update(b)
-    #             tmp_md5 = m.hexdigest()
-    #             psw = 'password=' + '\'' + tmp_md5 + '\''
-    #             attrs[i] = psw
-    #             if i == attrs.__len__() - 1:
-    #                 str = str + attrs[i].__str__()
-    #             else:
-    #                 str = str + attrs[i].__str__() + ','
-    #         # 更新的属性是昵称
-    #         elif itList[0] == 'nickname':
-    #             tmp = 'nickname=' + '\'' + itList[1] + '\''
-    #             if i == attrs.__len__() - 1:
-    #                 str = str + tmp
-    #             else:
-    #                 str = str + tmp + ','
-    #         # 更新的属性是权限
-    #         elif itList[0] == 'quanxian':
-    #             tmp = 'quanxian=' + '\'' + itList[1] + '\''
-    #             if i == attrs.__len__() - 1:
-    #                 str = str + tmp
-    #             else:
-    #                 str = str + tmp + ','
-    #         # 更新的属性是用户名
-    #         elif itList[0] == 'username':
-    #             tmp = 'username=' + '\'' + itList[1] + '\''
-    #             if i == attrs.__len__() - 1:
-    #                 str = str + tmp
-    #             else:
-    #                 str = str + tmp + ','
-    #         else:
-    #             if i == attrs.__len__() - 1:
-    #                 str = str + attrs[i].__str__()
-    #             else:
-    #                 str = str + attrs[i].__str__() + ','
-    #
-    #     sql = "UPDATE yzbc.yz_user SET %s WHERE username = '%s';"
-    #     data = (str, condition)
-    #     try:
-    #         # 执行sql语句
-    #         cursor.execute(sql % data)
-    #         # 提交到数据库执行
-    #         db.commit()
-    #         print("用户更新已提交到数据库")
-    #     except:
-    #         print("写入发生错误，进行数据回滚")
-    #         db.rollback()
+    # 遍历配置文件，进行各属性的配置
+    # logG = 1时将日志输出打开，logG = 0时关闭日志
+    logG = 0
+    DOMTree = xml.dom.minidom.parse("config.xml")
+    services = DOMTree.documentElement
+ 
+    # 在集合中获取所有电影
+    service = services.getElementsByTagName("update")
+    
+    for attrs in service:
+        attr = attrs.getElementsByTagName('log')[0]
+        logG = attr.childNodes[0].data
+    desList = sys.argv
+    print(desList)
+    if desList.__len__() > 3:
+        if logG:
+            print("用户输入错误")
+    else:
+        attrList = desList[1]
+        condition = desList[2]
+        attrs = attrList.split(',')
+        str = ''
+        for i in range(attrs.__len__()):
+            itList = attrs[i].split('=')
+            # 更新的属性是密码
+            if itList[0] == 'password':
+                tmp = itList[1]
+                m = hashlib.md5()
+                b = tmp.encode(encoding='utf-8')
+                m.update(b)
+                tmp_md5 = m.hexdigest()
+                psw = 'password=' + '\'' + tmp_md5 + '\''
+                attrs[i] = psw
+                if i == attrs.__len__() - 1:
+                    str = str + attrs[i].__str__()
+                else:
+                    str = str + attrs[i].__str__() + ','
+            # 更新的属性是昵称
+            elif itList[0] == 'nickname':
+                tmp = 'nickname=' + '\'' + itList[1] + '\''
+                if i == attrs.__len__() - 1:
+                    str = str + tmp
+                else:
+                    str = str + tmp + ','
+            # 更新的属性是权限
+            elif itList[0] == 'quanxian':
+                tmp = 'quanxian=' + '\'' + itList[1] + '\''
+                if i == attrs.__len__() - 1:
+                    str = str + tmp
+                else:
+                    str = str + tmp + ','
+            # 更新的属性是用户名
+            elif itList[0] == 'username':
+                tmp = 'username=' + '\'' + itList[1] + '\''
+                if i == attrs.__len__() - 1:
+                    str = str + tmp
+                else:
+                    str = str + tmp + ','
+            else:
+                if i == attrs.__len__() - 1:
+                    str = str + attrs[i].__str__()
+                else:
+                    str = str + attrs[i].__str__() + ','
+    
+        sql = "UPDATE yzbc.yz_user SET %s WHERE username = '%s';"
+        data = (str, condition)
+        try:
+            # 执行sql语句
+            cursor.execute(sql % data)
+            # 提交到数据库执行
+            db.commit()
+            if logG:
+                print("用户更新已提交到数据库")
+        except:
+            if logG:
+                print("写入发生错误，进行数据回滚")
+            db.rollback()

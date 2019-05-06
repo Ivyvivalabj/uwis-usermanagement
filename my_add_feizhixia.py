@@ -23,6 +23,7 @@ def updateTeacher(teachername,classids,quanxian,cursor, db):
     cursor.execute(sql)
     teacherData = cursor.fetchone()
     if teacherData == None:
+
         print("找不到老师：%s" %teachername)
         return False
     else:
@@ -38,10 +39,12 @@ def updateTeacher(teachername,classids,quanxian,cursor, db):
         cursor.execute(sql % data)
         # 提交到数据库执行
         db.commit()
-        print("教师权限更新已提交到数据库")
+        if logG:
+            print("教师权限更新已提交到数据库")
 
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("教师用户数据添加错误")
         db.rollback()
         return False
 
@@ -52,9 +55,11 @@ def updateTeacher(teachername,classids,quanxian,cursor, db):
         cursor.execute(sql % data)
         # 提交到数据库执行
         db.commit()
-        print("教师权限更新已提交到数据库")
+        if logG:
+            print("教师权限更新已提交到数据库")
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("教师数据添加错误")
         db.rollback()
         return False
 
@@ -69,7 +74,8 @@ def creatStudent(row,schoolid,cursor, db,expire_date=94608000,password=123456):
     gradeData = cursor.fetchone()
 
     if gradeData == None:
-        print("当前年级不存在")
+        if logG:
+            print("当前年级不存在")
         return False
     else:
         gradeId = gradeData[0]
@@ -81,7 +87,8 @@ def creatStudent(row,schoolid,cursor, db,expire_date=94608000,password=123456):
 
     classData = cursor.fetchone()
     if classData == None:
-        print("当前班级不存在")
+        if logG:
+            print("当前班级不存在")
         return False
     else:
         classId = classData[0]
@@ -110,9 +117,11 @@ def creatStudent(row,schoolid,cursor, db,expire_date=94608000,password=123456):
         # 提交到数据库执行
         uid = cursor.lastrowid
         db.commit()
-        print("数据已经提交到用户表中")
+        if logG:
+            print("数据已经提交到用户表中")
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("学生用户数据写入发生错误")
         db.rollback()
         return False
     # 进行学生的创建
@@ -131,10 +140,12 @@ def creatStudent(row,schoolid,cursor, db,expire_date=94608000,password=123456):
         # 提交到数据库执行
         stuId = cursor.lastrowid
         db.commit()
-        print("数据已经提交到用户表中")
+        if logG:
+            print("数据已经提交到用户表中")
         return uid
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("学生数据写入错误")
         db.rollback()
         return False
 
@@ -146,7 +157,8 @@ def checkStudent(stuId,cursor):
     cursor.execute(sql % data)
     result = cursor.fetchone()
     if result == None:
-        print("当前用户不存在")
+        if logG:
+            print("当前用户不存在")
         return False
     else:
         return result
@@ -172,10 +184,12 @@ def createClass(classname,readsortid,studentgroupid,course,gradeid,schoolid,curs
         # 提交到数据库执行
         new_id = cursor.lastrowid
         db.commit()
-        print("数据已经提交到数据库")
+        if logG:
+            print("数据已经提交到数据库")
         return new_id
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("班级数据写入发生错误")
         db.rollback()
         return False
     pass
@@ -188,7 +202,8 @@ def findClassByRSId(classRSId, cursor):
     cursor.execute(sql % data)
     result = cursor.fetchone()
     if result == None:
-        print("当前年级不存在")
+        if logG:
+            print("当前年级不存在")
         return False
     else:
         return result[0]
@@ -205,10 +220,12 @@ def createGrade(gradename,readsortid,schoolid,cursor, db, expiredate=0):
         # 提交到数据库执行
         new_id = cursor.lastrowid
         db.commit()
-        print("数据已经提交到数据库")
+        if logG:
+            print("数据已经提交到数据库")
         return new_id
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("年级数据写入发生错误")
         db.rollback()
         return False
 
@@ -220,7 +237,8 @@ def findGradeIdByRSid(gradeRSid, cursor):
     cursor.execute(sql % data)
     result = cursor.fetchone()
     if result == None:
-        print("当前年级不存在")
+        if logG:
+            print("当前年级不存在")
         return False
     else:
         return result[0]
@@ -233,7 +251,8 @@ def checkReadsort(title, pid, cursor):
     cursor.execute(sql % data)
     result = cursor.fetchone()
     if result == None:
-        print("当前板块不存在")
+        if logG:
+            print("当前板块不存在")
         return False
     else:
         return result[0]
@@ -253,9 +272,11 @@ def updateReadsort(readsortId, usergroupId,cursor, db):
         cursor.execute(sql % data)
         # 提交到数据库执行
         db.commit()
-        print("用户组权限更新已提交到数据库")
+        if logG:
+            print("用户组权限更新已提交到数据库")
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("用户组权限数据写入发生错误")
         db.rollback()
         return False
 
@@ -272,10 +293,12 @@ def createUserGroup(usergroupname, cursor, db, quanxian=''):
         # 提交到数据库执行
         new_id = cursor.lastrowid
         db.commit()
-        print("数据已经提交到数据库")
+        if logG:
+            print("用户组数据已经提交到数据库")
         return new_id
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("用户组数据写入发生错误")
         db.rollback()
         return False
 
@@ -286,7 +309,8 @@ def checkUserGroup(usergroupName,cursor):
     cursor.execute(sql)
     result = cursor.fetchone()
     if result == None:
-        print("当前用户组不存在用户组表中")
+        if logG:
+            print("当前用户组不存在用户组表中")
         return False
     else:
         return result[0]
@@ -322,9 +346,11 @@ def createTeacher(name,phone,schoolid,cursor,db,quanxian='',expire_date=94608000
         # 提交到数据库执行
         uid = cursor.lastrowid
         db.commit()
-        print("数据已经提交到用户表中")
+        if logG:
+            print("数据已经提交到用户表中")
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("教师信息写入发生错误，进行数据回滚")
         db.rollback()
         return False
 
@@ -343,10 +369,12 @@ def createTeacher(name,phone,schoolid,cursor,db,quanxian='',expire_date=94608000
         # 提交到数据库执行
         id = cursor.lastrowid
         db.commit()
-        print("数据已经提交到教师表中")
+        if logG:
+            print("数据已经提交到教师表中")
         return id
     except:
-        print("输入写入发生错误，进行数据回滚")
+        if logG:
+            print("教师用户数据写入发生错误")
         db.rollback()
         return False
 
@@ -359,18 +387,13 @@ def createSchool(schoolname, cursor, schoolRSid, province, city, db, stugroupid=
     sql = "INSERT INTO yzbc.yz_jxgl_school(schoolname,sketch,readsortid,stugroupid, province, city, creatdate) " \
           "VALUES ('%s', '%s',%s,%s, '%s', '%s',%s);"
     data = (schoolname, sketch, readsortid, stugroupid, province, city, creatdate)
-    # try:
-    # 执行sql语句
     cursor.execute(sql % data)
     # 提交到数据库执行
     new_id = cursor.lastrowid
     db.commit()
-    print("数据已经提交到数据库")
+    if logG:
+        print("数据已经提交到数据库")
     return new_id
-    # except:
-    #     print("写入发生错误，进行数据回滚")
-    #     db.rollback()
-    #     return False
 
 # 通过学校的名字查询学校的ID
 def findSchoolByName(schoolname,cursor):
@@ -391,7 +414,8 @@ def checkTeacher(phone, cursor):
     cursor.execute(sql)
     result = cursor.fetchone()
     if result == None:
-        print("当前老师不存在用户表中")
+        if logG:
+            print("当前老师不存在用户表中")
         return False
     else:
         # 根据userId去老师表中查找是否已经在老师表中注册过
@@ -402,7 +426,8 @@ def checkTeacher(phone, cursor):
             teacherId = teacherData[0]
             return teacherId
         else:
-            print("教师存在于用户表却不存在教师表中")
+            if logG:
+                print("教师存在于用户表却不存在教师表中")
             return False
 
 # 创建板块函数
@@ -418,13 +443,14 @@ def createReadsort(title, cursor,db, pid =0 , allowgroupids = '', label = ''):
         # 提交到数据库执行
         new_id = cursor.lastrowid
         db.commit()
-        print("数据已经提交到数据库")
+        if logG:
+            print("板块数据已经提交到数据库")
         return new_id
     except:
-        print("写入发生错误，进行数据回滚")
+        if logG:
+            print("板块数据写入发生错误，进行数据回滚")
         db.rollback()
         return False
-
 
 # 根据板块名检查板块是否存在；若存在，返回值为包含id和title的数组;若不存在，则返回false
 def checkTitleExist(title, cursor):
@@ -439,7 +465,7 @@ def checkTitleExist(title, cursor):
     else:
         return False
 
-def feizhixia_main(entry, path, db, cursor):
+def feizhixia_main(logG,entry, path, db, cursor):
     # 文件是否齐全检查过程
     somethingWrong = False
     print(entry.name)
@@ -472,14 +498,18 @@ def feizhixia_main(entry, path, db, cursor):
                                     haveGrade_class_teacher_course = True
                             if haveGrade_class_teacher_course == False:
                                 somethingWrong = True
-                                print("%s路径下年级班级老师课程表不存在" % pathFinal)
+                                if logG:
+                                    print("%s路径下年级班级老师课程表不存在" % pathFinal)
                             if haveTeacher == False:
                                 somethingWrong = True
-                                print("%s路径下老师课程表不存在" % pathFinal)
+                                if logG:
+                                    print("%s路径下老师课程表不存在" % pathFinal)
                             if haveCSV == False:
                                 somethingWrong = True
-                                print("%s路径下学生名单不存在" % pathFinal)
+                                if logG:
+                                    print("%s路径下学生名单不存在" % pathFinal)
     if somethingWrong:
+        print("文件检查未通过")
         exit(0)
     else:
         print("文件检查通过")
@@ -493,21 +523,24 @@ def feizhixia_main(entry, path, db, cursor):
             if not entry.name.startswith('.') and entry.is_dir() and entry.name != "logs" and entry != None:
                 dirName1 = entry.name
                 path2 = path + "/" + dirName1
-                print("%s目录正在安装" % dirName1)
+                if logG:
+                    print("%s目录正在安装" % dirName1)
                 provinceRSid = 0
                 whetherExistData = checkTitleExist(dirName1, cursor)
                 # 当前读取的文件夹所对应的板块存在
                 if whetherExistData:
                     provinceRSid = whetherExistData[1]
-                    print("当前读取文件加所对应板块已经存在，板块id: %s" % provinceRSid)
+                    if logG:
+                        print("当前读取文件加所对应板块已经存在，板块id: %s" % provinceRSid)
                 # 当前读取的文件夹所对应的板块不存在
                 else:
                     provinceRSid = createReadsort(dirName1, cursor, db, label=dirName1)
                     if provinceRSid == False:
-                        print("发生数据回滚，请用户检查数据")
+                        print("省级数据错误")
                         exit(0)
                     else:
-                        print("创建省级板块成功，板块id:%s" % provinceRSid)
+                        if logG:
+                            print("创建省级板块成功，板块id:%s" % provinceRSid)
 
                 # 市级目录读取
                 with os.scandir(path2) as it2:
@@ -515,21 +548,24 @@ def feizhixia_main(entry, path, db, cursor):
                         if not entry2.name.startswith('.') and entry2.is_dir():
                             dirName2 = entry2.name
                             path3 = path2 + "/" + dirName2
-                            print("%s目录正在安装" % dirName2)
+                            if logG:
+                                print("%s目录正在安装" % dirName2)
                             cityRSid = 0
                             whetherExistData = checkTitleExist(dirName2, cursor)
                             # 当前读取的文件夹所对应的板块存在
                             if whetherExistData:
                                 cityRSid = whetherExistData[1]
-                                print("当前读取文件加所对应板块已经存在，板块id: %s" % cityRSid)
+                                if logG:
+                                    print("当前读取文件加所对应板块已经存在，板块id: %s" % cityRSid)
                             # 当前读取的文件夹所对应的板块不存在
                             else:
                                 cityRSid = createReadsort(dirName2, cursor, db, pid=provinceRSid,label=dirName2)
                                 if cityRSid == False:
-                                    print("发生数据回滚，请用户检查数据")
+                                    print("市级数据发生数据回滚，请用户检查数据")
                                     exit(0)
                                 else:
-                                    print("创建市级板块成功，板块id:%s" % cityRSid)
+                                    if logG:
+                                        print("创建市级板块成功，板块id:%s" % cityRSid)
 
 
                             # 校级目录读取
@@ -537,7 +573,8 @@ def feizhixia_main(entry, path, db, cursor):
                                 for entry3 in it3:
                                     dirName3 = entry3.name
                                     path4 = path3 + "/" + dirName3
-                                    print("%s目录正在安装" % dirName3)
+                                    if logG:
+                                        print("%s目录正在安装" % dirName3)
                                     schoolRSid = 0
                                     schoolId = 0
                                     whetherExistData = checkTitleExist(dirName3, cursor)
@@ -545,9 +582,11 @@ def feizhixia_main(entry, path, db, cursor):
                                     if whetherExistData:
                                         # 获取当前学校对应板块id
                                         schoolRSid = whetherExistData[1]
-                                        print("当前读取文件加所对应板块已经存在，板块id: %s" % schoolRSid)
+                                        if logG:
+                                            print("当前读取文件加所对应板块已经存在，板块id: %s" % schoolRSid)
                                         schoolId = findSchoolByName(dirName3, cursor)
-                                        print("当前读取文件加所对应学校已经存在，学校id: %s" % schoolId)
+                                        if logG:
+                                            print("当前读取文件加所对应学校已经存在，学校id: %s" % schoolId)
 
 
                                     # 当前读取的文件夹所对应的板块不存在
@@ -555,11 +594,12 @@ def feizhixia_main(entry, path, db, cursor):
                                         schoolRSid = createReadsort(dirName3, cursor, db, pid=cityRSid,label=dirName3)
                                         schoolId = createSchool(dirName3, cursor, schoolRSid, dirName1, dirName2, db)
                                         if schoolRSid == False or schoolId == False:
-                                            print("发生数据回滚，请用户检查数据")
+                                            print("校级发生数据回滚，请用户检查数据")
                                             exit(0)
                                         else:
-                                            print("创建学校板块成功，板块id:%s" % schoolRSid)
-                                            print("创建学校成功，学校id:%s" % schoolId)
+                                            if logG:
+                                                print("创建学校板块成功，板块id:%s" % schoolRSid)
+                                                print("创建学校成功，学校id:%s" % schoolId)
 
 
 
@@ -573,10 +613,12 @@ def feizhixia_main(entry, path, db, cursor):
                                         teacherId = checkTeacher(teacherInfor[1].strip(), cursor)
                                         # 如果老师已经存在或者
                                         if teacherId:
-                                            print("%s已经存在，不需要再创建" % teacherInfor[0])
+                                            if logG:
+                                                print("%s已经存在，不需要再创建" % teacherInfor[0])
                                         # 如果老师不存在
                                         else:
-                                            print("%s不存在，正在进行创建" % teacherInfor[0])
+                                            if logG:
+                                                print("%s不存在，正在进行创建" % teacherInfor[0])
                                             # name,phone,schoolid,cursor,db,quanxian='',expire_date=94608000,groupid=5,password=123456
                                             teacherId = createTeacher(teacherInfor[0], teacherInfor[1], schoolId, cursor, db)
 
@@ -608,16 +650,20 @@ def feizhixia_main(entry, path, db, cursor):
                                         if usergroupId:
                                             stugroupId = usergroupId
                                             # updateReadsort(provinceRSid, stugroupId,cursor, db)
-                                            print("用户组已经存在，不需要更新")
+                                            if logG:
+                                                print("用户组已经存在，不需要更新")
                                         # 用户组不存在的情况
                                         else:
                                             stugroupId = createUserGroup(usergroupName, cursor, db)
                                             updateReadsort(provinceRSid, stugroupId,cursor, db)
-                                            print("更新省板块成功")
+                                            if logG:
+                                                print("更新省板块成功")
                                             updateReadsort(cityRSid, stugroupId,cursor, db)
-                                            print("更新市板块成功")
+                                            if logG:
+                                                print("更新市板块成功")
                                             updateReadsort(schoolRSid, stugroupId,cursor, db)
-                                            print("更新学校板块成功")
+                                            if logG:
+                                                print("更新学校板块成功")
 
                                         # 检查当前的年级板块是否存在,如果存在获取当前年级板块的Id
                                         gradeRSid = checkReadsort(gradeName.__str__(), schoolRSid, cursor)
@@ -627,17 +673,21 @@ def feizhixia_main(entry, path, db, cursor):
                                             isgradenew = False
                                             # 更新年级板块和对应用户组的权限
                                             updateReadsort(gradeRSid, stugroupId, cursor, db)
-                                            print("更新年级板块成功")
+                                            if logG:
+                                                print("更新年级板块成功")
                                             gradeId = findGradeIdByRSid(gradeRSid, cursor)
                                         # 当前的年级板块不存在的情况
                                         else:
                                             label = dirName3 + ',' + gradeName
                                             gradeRSid = createReadsort(gradeName, cursor, db, pid=schoolRSid, allowgroupids=stugroupId.__str__(), label=label)
-                                            print("创建年级板块成功，年级板块id: %s" %gradeRSid)
+                                            if logG:
+                                                print("创建年级板块成功，年级板块id: %s" %gradeRSid)
                                             updateReadsort(gradeRSid, stugroupId,cursor, db)
-                                            print("更新年级板块成功")
+                                            if logG:
+                                                print("更新年级板块成功")
                                             gradeId = createGrade(gradeName, gradeRSid, schoolId,cursor, db)
-                                            print("创建年级成功，年级id: %s" % gradeId)
+                                            if logG:
+                                                print("创建年级成功，年级id: %s" % gradeId)
 
                                         # 检查当前的班级板块是否存在，如果存在获取当前班级板块的Id
                                         classRSid = checkReadsort(className, gradeRSid, cursor)
@@ -645,19 +695,23 @@ def feizhixia_main(entry, path, db, cursor):
                                         if classRSid:
                                             classId = findClassByRSId(classRSid, cursor)
                                             updateReadsort(classRSid, stugroupId,cursor, db)
-                                            print("%s班级板块已经存在，不需要再创建" %className)
+                                            if logG:
+                                                print("%s班级板块已经存在，不需要再创建" %className)
                                         # 当前班级板块不存在的情况
                                         else:
                                             label = dirName3 + ',' + gradeName + ',' + className + ',' + usergroupName
                                             # 创建班级板块
                                             classRSid = createReadsort(className, cursor, db, pid=gradeRSid, allowgroupids=stugroupId.__str__(), label=label)
-                                            print("创建%s班级板块成功" %className)
+                                            if logG:
+                                                print("创建%s班级板块成功" %className)
                                             updateReadsort(classRSid, stugroupId,cursor, db)
-                                            print("更新%s板块成功" %className)
+                                            if logG:
+                                                print("更新%s板块成功" %className)
 
                                             # 创建班级
                                             classId = createClass(className, classRSid, stugroupId, courseName, gradeId, schoolId, cursor, db)
-                                            print("创建%s成功" % className)
+                                            if logG:
+                                                print("创建%s成功" % className)
 
                                             # 获取对应年级的标准化课件
                                             # 首先去找是否有对应课程编号的板块
@@ -689,9 +743,10 @@ def feizhixia_main(entry, path, db, cursor):
                                                         cursor.execute(sql % data)
                                                         # 提交到数据库执行
                                                         db.commit()
-                                                        print("%s帖子数据已经提交到数据库" %needTitle)
+                                                        if logG:
+                                                            print("%s帖子数据已经提交到数据库" %needTitle)
                                                     except:
-                                                        print("写入发生错误，进行数据回滚")
+                                                        print("添加标准课件发生错误")
                                                         db.rollback()
 
                                         # 如果在字典中存在老师的名字，则说明这位老师负责不止一个班级
@@ -720,7 +775,8 @@ def feizhixia_main(entry, path, db, cursor):
                                     # 进行教师用户权限的更新
                                     for key in teacherQXTabel:
                                         updateTeacher(key, teacherClassId[key], teacherQXTabel[key], cursor, db)
-                                        print("更新教师成功")
+                                        if logG:
+                                            print("更新教师成功")
 
 
                                     # 进行标准课件的更新
@@ -736,7 +792,8 @@ def feizhixia_main(entry, path, db, cursor):
                                             # 找到标准课程所对应的板块ID
                                             courseReadSortId = cursor.fetchone()
                                             if courseReadSortId == None:
-                                                print("当前年级板块没有标准课程，无需更新")
+                                                if logG:
+                                                    print("当前年级板块没有标准课程，无需更新")
                                             else:
                                                 # 如果当前找到的课程板块不为空
                                                 # 获取当前板块下的所有帖子
@@ -769,9 +826,10 @@ def feizhixia_main(entry, path, db, cursor):
                                                             cursor.execute(sql % data)
                                                             # 提交到数据库执行
                                                             db.commit()
-                                                            print("标准课件已经更新")
+                                                            if logG:
+                                                                print("标准课件已经更新")
                                                         except:
-                                                            print("写入发生错误，进行数据回滚")
+                                                            print("标准课件更新错误")
                                                             db.rollback()
                                                             return False
 
@@ -786,12 +844,14 @@ def feizhixia_main(entry, path, db, cursor):
                                                             cursor.execute(sql % data)
                                                             # 提交到数据库执行
                                                             db.commit()
-                                                            print("%s帖子数据已经提交到数据库" % needTitle)
+                                                            if logG:
+                                                                print("%s帖子数据已经提交到数据库" % needTitle)
                                                         except:
-                                                            print("写入发生错误，进行数据回滚")
+                                                            print("标准课件添加错误")
                                                             db.rollback()
                                         else:
-                                            print("班级或年级板块没有创建，不需要更新课程")
+                                            if logG:
+                                                print("班级或年级板块没有创建，不需要更新课程")
 
                                     # 进行学生表数据的录入
                                     with os.scandir(path4) as it4:
@@ -819,18 +879,21 @@ def feizhixia_main(entry, path, db, cursor):
                                                                     cursor.execute(sql % data)
                                                                     # 提交到数据库执行
                                                                     db.commit()
-                                                                    print("用户昵称更新已提交到数据库")
+                                                                    if logG:
+                                                                        print("用户昵称更新已提交到数据库")
                                                                 except:
-                                                                    print("写入发生错误，进行数据回滚")
+                                                                    print("学生数据错误")
                                                                     db.rollback()
                                                         # 如果用户不存在
                                                         else:
                                                             # 创建用户
                                                             newStuId = creatStudent(row, schoolId, cursor, db)
                                                             if newStuId:
-                                                                print("创建学生成功")
+                                                                if logG:
+                                                                    print("创建学生成功")
                                                             else:
-                                                                print("创建学生失败")
+                                                                if logG:
+                                                                    print("创建学生失败")  
 
 
 

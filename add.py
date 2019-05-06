@@ -5,9 +5,12 @@ import my_add_zhixia as zx
 import pymysql
 import hashlib
 import sys
+from xml.dom.minidom import parse
+import xml.dom.minidom
+ 
 
 
-
+            
 def isAdminUser(username, password, cursor):
     sql = "SELECT password,identification FROM yzbc.yz_user where username = '%s'" % (username)
     cursor.execute(sql)
@@ -68,7 +71,6 @@ if __name__ == '__main__':
                     f.write(usernameRe + "\n")
                     f.write(passwordRe)
                     break
-
     except:
         # 如果保存的文件不存在，则创建文件，并要求用户输入账户名和密码
         f = open('pwd.txt','w+')
@@ -86,6 +88,20 @@ if __name__ == '__main__':
                 f.write(username+"\n")
                 f.write(password)
                 break
+    # 遍历配置文件，进行各属性的配置
+    # logG = 1时将日志输出打开，logG = 0时关闭日志
+    logG = 0
+    DOMTree = xml.dom.minidom.parse("config.xml")
+    services = DOMTree.documentElement
+ 
+    # 在集合中获取所有电影
+    service = services.getElementsByTagName("add")
+    
+    for attrs in service:
+        attr = attrs.getElementsByTagName('log')[0]
+        logG = attr.childNodes[0].data
+    
+
     #des = sys.argv[1]
     des = input()
     zhixia = ['北京市', '天津市', '上海市', '重庆市']
@@ -98,9 +114,9 @@ if __name__ == '__main__':
             for entry in it:
                 if not entry.name.startswith('.') and entry.is_dir() and entry.name != "logs" and entry != None:
                     if entry.name in zhixia:
-                        zx.zhixia_main(entry, path, db, cursor)
+                        zx.zhixia_main(logG,entry, path, db, cursor)
                     else:
-                        fzx.feizhixia_main(entry, path, db, cursor)
+                        fzx.feizhixia_main(logG,entry, path, db, cursor)
     # 如果当前的路径不存在，则提示用户当前路径不存在
     else:
         print("当前路径不存在")

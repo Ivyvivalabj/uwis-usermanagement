@@ -2,6 +2,8 @@
 import pymysql
 import hashlib
 import sys
+from xml.dom.minidom import parse
+import xml.dom.minidom
 """
 需求：
     1.删除指定账号
@@ -13,7 +15,7 @@ import sys
 """
 
 # 删除指定班级下的所有学生，以及学生所对应的账号
-def delStuandUserByClassName(condition, cursor, db):
+def delStuandUserByClassName(logG,condition, cursor, db):
     nameList = condition.split('-')
     if nameList.__len__() < 3:
         print("所输入的班级名称格式错误，请按照 某某学校-某某年级-某某班级 的格式输入班级名称")
@@ -186,28 +188,6 @@ def delAccountByUsername(condition, cursor, db):
         # 发生错误时回滚
         db.rollback()
 
-
-# def delete_main(cursor, db, des):
-#     des = des.strip()
-#     desList = des.split(' ')
-#     attributes = desList[0]
-#     condition = desList[1]
-#     # 删除指定账号
-#     if attributes == 'account':
-#         delAccountByUsername(condition, cursor, db)
-#     # 删除指定班级
-#     elif attributes == 'class':
-#         delClassByClassName(condition, cursor, db)
-#     # 删除指定班级的所有学生
-#     elif attributes == 'student':
-#         delStuandUserByClassName(condition, cursor, db)
-#     else:
-#         print("用户输入错误，请按照要求进行输入")
-
-
-
-
-
 def isAdminUser(username, password, cursor):
     sql = "SELECT password,identification FROM yzbc.yz_user where username = '%s'" % (username)
     cursor.execute(sql)
@@ -288,16 +268,28 @@ if __name__ == '__main__':
                 f.write(username + "\n")
                 f.write(password)
                 break
+    # 遍历配置文件，进行各属性的配置
+    # logG = 1时将日志输出打开，logG = 0时关闭日志
+    logG = 0
+    DOMTree = xml.dom.minidom.parse("config.xml")
+    services = DOMTree.documentElement
+ 
+    # 在集合中获取所有电影
+    service = services.getElementsByTagName("delete")
+    
+    for attrs in service:
+        attr = attrs.getElementsByTagName('log')[0]
+        logG = attr.childNodes[0].data
     attributes = sys.argv[1]
     condition = sys.argv[2]
     # 删除指定账号
     if attributes == 'account':
-        delAccountByUsername(condition, cursor, db)
+        delAccountByUsername(logG,condition, cursor, db)
     # 删除指定班级
     elif attributes == 'class':
-        delClassByClassName(condition, cursor, db)
+        delClassByClassName(logG,condition, cursor, db)
     # 删除指定班级的所有学生
     elif attributes == 'student':
-        delStuandUserByClassName(condition, cursor, db)
+        delStuandUserByClassName(logG,condition, cursor, db)
     else:
         print("用户输入错误，请按照要求进行输入")

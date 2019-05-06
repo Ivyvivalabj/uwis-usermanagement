@@ -69,7 +69,7 @@ def updateTeacher(teachername,classids,quanxian,cursor, db):
 
 # 先创建用户，再去创建学生
 def creatStudent(row,schoolid,cursor, db,expire_date=94608000,password=123456):
-    gradeName = "20"+ row[0] + "级"
+    gradeName = row[0] + "级"
     className = row[1] + "班"
     # 根据学校id和年级名字可以唯一确定一个年级
     sql = "SELECT id FROM yzbc.yz_jxgl_grade where schoolid = %s and gradename = '%s'"

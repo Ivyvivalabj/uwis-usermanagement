@@ -34,11 +34,10 @@ def isAdminUser(username, password, cursor):
         print("找不到对应的账号信息")
 
 if __name__ == '__main__':
-    print(sys.argv[0:])
     location = "120.26.47.132"
     username = "robotweb"
     password = "LG5qnmHfe5KmVDQb"
-    database = "yzbc"
+    database = "yzbc"   
     # 打开数据库连接
     try:
         db = pymysql.connect(location, username, password, database, charset='utf8')
@@ -87,7 +86,8 @@ if __name__ == '__main__':
                 f.write(username+"\n")
                 f.write(password)
                 break
-    des = sys.argv[1]
+    #des = sys.argv[1]
+    des = input()
     zhixia = ['北京市', '天津市', '上海市', '重庆市']
     des = des.strip()
     path = des

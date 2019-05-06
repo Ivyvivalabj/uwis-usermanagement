@@ -58,12 +58,9 @@ def updateTeacher(teachername,classids,quanxian,cursor, db):
         db.rollback()
         return False
 
-
-
-
 # 先创建用户，再去创建学生
 def creatStudent(row,schoolid,cursor, db,expire_date=94608000,password=123456):
-    gradeName = "20"+ row[0] + "级"
+    gradeName = row[0] + '级'
     className = row[1] + "班"
     # 根据学校id和年级名字可以唯一确定一个年级
     sql = "SELECT id FROM yzbc.yz_jxgl_grade where schoolid = %s and gradename = '%s'"
@@ -141,8 +138,6 @@ def creatStudent(row,schoolid,cursor, db,expire_date=94608000,password=123456):
         db.rollback()
         return False
 
-
-
 # 根据学生学号检查学生是否已经在用户表中注册
 def checkStudent(stuId,cursor):
     # 根据username去用户表中查找是否当前教师已经注册过
@@ -155,7 +150,6 @@ def checkStudent(stuId,cursor):
         return False
     else:
         return result
-
 
 # 在班级表中创建班级
 def createClass(classname,readsortid,studentgroupid,course,gradeid,schoolid,cursor,db,teacherids=0,expire_date=0):
@@ -184,7 +178,6 @@ def createClass(classname,readsortid,studentgroupid,course,gradeid,schoolid,curs
         print("写入发生错误，进行数据回滚")
         db.rollback()
         return False
-
     pass
 
 # 通过班级板块Id查找班级id
@@ -232,8 +225,6 @@ def findGradeIdByRSid(gradeRSid, cursor):
     else:
         return result[0]
 
-
-
 # 检查年级、班级板块是否存在
 def checkReadsort(title, pid, cursor):
     # 根据username去用户表中查找是否当前教师已经注册过
@@ -246,8 +237,6 @@ def checkReadsort(title, pid, cursor):
         return False
     else:
         return result[0]
-
-
 
 # 更新板块权限
 def updateReadsort(readsortId, usergroupId,cursor, db):
@@ -270,7 +259,6 @@ def updateReadsort(readsortId, usergroupId,cursor, db):
         db.rollback()
         return False
 
-
 # 创建用户组
 def createUserGroup(usergroupname, cursor, db, quanxian=''):
     readlevel = 10
@@ -290,7 +278,6 @@ def createUserGroup(usergroupname, cursor, db, quanxian=''):
         print("写入发生错误，进行数据回滚")
         db.rollback()
         return False
-
 
 # 检查当前用户组是否存在
 def checkUserGroup(usergroupName,cursor):
@@ -363,7 +350,6 @@ def createTeacher(name,phone,schoolid,cursor,db,quanxian='',expire_date=94608000
         db.rollback()
         return False
 
-
 # 创建学校，在学校表中插入数据
 def createSchool(schoolname, cursor, schoolRSid, province, city, db, stugroupid=0, expire_date=''):
     creatdate = time.strftime("%Y%m%d", time.localtime())
@@ -397,7 +383,6 @@ def findSchoolByName(schoolname,cursor):
     else:
         return False
 
-
 # 检查当前的老师是否存在
 def checkTeacher(phone, cursor):
     # 根据username去用户表中查找是否当前教师已经注册过
@@ -420,16 +405,10 @@ def checkTeacher(phone, cursor):
             print("教师存在于用户表却不存在教师表中")
             return False
 
-"""
-    创建板块函数
-    所需参数:
-        $pid:父板块id
-        $title:板块名
-        $label：板块标签
-"""
+# 创建板块函数
 def createReadsort(title, cursor,db, pid =0 , allowgroupids = '', label = ''):
     content = title
-    allowgroupids = '5,' + allowgroupids + ','
+    allowgroupids = '16,5,' + allowgroupids + ','
     # SQL 插入语句
     sql = "INSERT INTO yzbc.yz_readsort(pid, title, content, label, allowgroupids) VALUES (%s, '%s', '%s', '%s', '%s');"
     data = (pid, title, content, label, allowgroupids)
@@ -447,11 +426,7 @@ def createReadsort(title, cursor,db, pid =0 , allowgroupids = '', label = ''):
         return False
 
 
-"""
-  根据板块名检查板块是否存在；
-  若存在，返回值为包含id和title的数组
-  若不存在，则返回false
-"""
+# 根据板块名检查板块是否存在；若存在，返回值为包含id和title的数组;若不存在，则返回false
 def checkTitleExist(title, cursor):
     result = []
     result.append(title)
@@ -464,7 +439,6 @@ def checkTitleExist(title, cursor):
     else:
         return False
 
-
 def feizhixia_main(entry, path, db, cursor):
     # 文件是否齐全检查过程
     somethingWrong = False
@@ -475,8 +449,8 @@ def feizhixia_main(entry, path, db, cursor):
     with os.scandir(path2) as it2:
             for entry2 in it2:
                 if not entry.name.startswith('.') and entry.is_dir():
-                    dirName2 = entry2.name
-                    print(dirName2)
+                    print(entry2)
+                    dirName2 = entry.name
                     path3 = path2 + "/" + dirName2
                     # 校级目录读取
                     with os.scandir(path3) as it3:
@@ -518,7 +492,7 @@ def feizhixia_main(entry, path, db, cursor):
         for entry in it:
             if not entry.name.startswith('.') and entry.is_dir() and entry.name != "logs" and entry != None:
                 dirName1 = entry.name
-                path2 = path + "\\" + dirName1
+                path2 = path + "/" + dirName1
                 print("%s目录正在安装" % dirName1)
                 provinceRSid = 0
                 whetherExistData = checkTitleExist(dirName1, cursor)
@@ -540,7 +514,7 @@ def feizhixia_main(entry, path, db, cursor):
                     for entry2 in it2:
                         if not entry2.name.startswith('.') and entry2.is_dir():
                             dirName2 = entry2.name
-                            path3 = path2 + "\\" + dirName2
+                            path3 = path2 + "/" + dirName2
                             print("%s目录正在安装" % dirName2)
                             cityRSid = 0
                             whetherExistData = checkTitleExist(dirName2, cursor)
@@ -562,7 +536,7 @@ def feizhixia_main(entry, path, db, cursor):
                             with os.scandir(path3) as it3:
                                 for entry3 in it3:
                                     dirName3 = entry3.name
-                                    path4 = path3 + "\\" + dirName3
+                                    path4 = path3 + "/" + dirName3
                                     print("%s目录正在安装" % dirName3)
                                     schoolRSid = 0
                                     schoolId = 0
@@ -591,7 +565,7 @@ def feizhixia_main(entry, path, db, cursor):
 
 
                                     # 对文件“校管表”、“老师表”中的内容，将老师的数据导入数据库
-                                    teacherTablePath = path4 + "\\" + "老师表.txt"
+                                    teacherTablePath = path4 + "/" + "老师表.txt"
                                     teacherFile = open(teacherTablePath, 'r', encoding='utf-8-sig')
                                     teacherTable = teacherFile.readlines()
                                     for teacher in teacherTable:
@@ -608,7 +582,7 @@ def feizhixia_main(entry, path, db, cursor):
 
 
                                     # 对年级班级老师课程表中的数据进行处理
-                                    teacherCourseTablePath = path4 + "\\" + "年级班级老师课程表.txt"
+                                    teacherCourseTablePath = path4 + "/" + "年级班级老师课程表.txt"
                                     teacherCourseTabelFile = open(teacherCourseTablePath, 'r', encoding='utf-8-sig')
                                     teacherCourseTable = teacherCourseTabelFile.readlines()
                                     # 进行老师权限的设置所需要用的字典
@@ -823,7 +797,7 @@ def feizhixia_main(entry, path, db, cursor):
                                     with os.scandir(path4) as it4:
                                         for entry4 in it4:
                                             if entry4.name.endswith('.csv'):
-                                                stuCSVPath = path4 + "\\" + entry4.name
+                                                stuCSVPath = path4 + "/" + 'xs.csv'
                                                 with open(stuCSVPath, newline='') as f:
                                                     reader = csv.reader(f)
                                                     for row in reader:
